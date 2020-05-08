@@ -1,0 +1,21 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 2019,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "extends": ["eslint:recommended"],
+  "rules": {
+    "strict": ["warn", "never"]
+    // "valid-typeof": "warn",
+    // "no-undef": "error",
+    // "no-unsafe-negation": "error",
+    // "no-unexpected-multiline": "error",
+    // "no-unused-vars": "warn"
+  },
+  "env": {
+    "browser": true
+  }
+}
