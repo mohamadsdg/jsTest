@@ -8,7 +8,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint src ",
     "lint:CustomPathIgnore": "eslint --ignore-path ../.gitignore src",
-    "format": "prettier --ignore-path ../.gitignore --write \"**/*.(js|json)\" "
+    "prettier": "prettier --ignore-path ../.gitignore \"**/*.(js|json)\" ",
+    "format:when-using-npm": "npm run prettier -- --write",
+    "format": "yarn run prettier --write",
+    "check-format": "yarn run prettier --list-different ",
+    "validate": "yarn run check-format && yarn run lint:CustomPathIgnore && yarn run build"
   },
   "author": "",
   "license": "ISC",
@@ -17,6 +21,7 @@
     "@babel/core": "^7.9.6",
     "@babel/preset-env": "^7.9.6",
     "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.11.0",
     "prettier": "^2.0.5"
   }
 }

@@ -6,9 +6,11 @@
       "jsx": true
     }
   },
-  "extends": ["eslint:recommended"],
+  "extends": ["eslint:recommended", "eslint-config-prettier"],
   "rules": {
-    "strict": ["warn", "never"]
+    "strict": ["warn", "never"],
+    "semi": ["warn", "never"],
+    "no-console": "warn"
     // "valid-typeof": "warn",
     // "no-undef": "error",
     // "no-unsafe-negation": "error",
