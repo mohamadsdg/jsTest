@@ -4,13 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "babel src --out-dir build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint src ",
-    "lint:CustomPathIgnore": "eslint --ignore-path ../.gitignore src"
+    "lint:CustomPathIgnore": "eslint --ignore-path ../.gitignore src",
+    "format": "prettier --ignore-path ../.gitignore --write \"**/*.(js|json)\" "
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "eslint": "^6.8.0"
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "eslint": "^6.8.0",
+    "prettier": "^2.0.5"
   }
 }
