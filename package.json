@@ -1,13 +1,18 @@
 {
-  "name": "testJs",
+  "name": "mock",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
+  "license": "MIT",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {}
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "create-jest-runner": "^0.6.0",
+    "glob": "^7.1.6",
+    "jest": "^26.0.1"
+  }
 }
