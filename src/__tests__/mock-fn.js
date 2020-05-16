@@ -1,16 +1,6 @@
 const thumbWar = require("../thumb-war");
 const utils = require("../utils");
 
-function _fn(impl) {
-  const mock_fn = (...arg) => {
-    mock_fn.mock.calls.push(args);
-    return impl(...arg);
-  };
-
-  mock_fn.mock = { calls: [] };
-  return mock_fn;
-}
-
 describe("mock-fn scope", () => {
   test("My Test", () => {
     const fn = jest.fn();
@@ -26,7 +16,6 @@ describe("mock-fn scope", () => {
   test("return winner", () => {
     const originalWinner = utils.getWinner;
     utils.getWinner = jest.fn((p1, p2) => p1);
-    // utils.getWinner = _fn((p1, p2) => p1);
 
     const winner = thumbWar("Kent C. Dodds", "KenWheeler");
     expect(winner).toBe("Kent C. Dodds");
