@@ -8,9 +8,11 @@ describe("mock-fn scope", () => {
     // fn.mockReturnValueOnce(50);
     fn.mockReturnValue("defualt value ");
 
-    console.log(fn(), fn.mock.calls);
+    fn();
+    // console.log(fn(), fn.mock.calls);
 
     expect(fn).toHaveBeenCalled();
+    // expect(fn).toHaveBeenCalledTimes(2);
   });
 
   test("return winner", () => {
